@@ -15,7 +15,7 @@ log.setLevel(config.verbosity);
 log.info(pkg.name + ' ' + pkg.version + ' starting');
 log.info('mqtt trying to connect', config.url);
 
-const mqtt = Mqtt.connect(config.url, {port:1883, will: {topic: config.name + '/connected', payload: '0', retain: true}});
+const mqtt = Mqtt.connect(config.url, {port: 1883, will: {topic: config.name + '/connected', payload: '0', retain: true}});
 
 const lgtv = new Lgtv({
     url: 'ws://' + config.tv + ':3000'
